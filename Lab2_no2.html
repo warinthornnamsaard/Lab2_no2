@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width",initial-scale="1.0">
+        <title>lab2no2</title>
+        <h1>แบบฟอร์มจองทัวร์</h1>
+    </head>
+    <body>
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            <label for="fullname">ชื่อ-สกุล :</label><br>
+            <input type="text" name="fullname" placeholder="กรอกชื่อ-สกุล" pattern="[^0-9]" required><b>*</b><br>
+            <label for="email">Email :</label><br>
+            <input type="email" name="email" required><b>*</b><br>
+            <label for="tel">โทรศัพท์ :</label><br>
+            <input type="tel" name="tel" value="+66" pattern="\+66[0-9]{9}" required><b>*</b><br>
+            <label for="address">ที่อยู่ :</label><br>
+            <textarea name="address" rows="4" cols="35"></textarea><br>
+            <lable type="postcode">รหัสไปรษณีย์ :</lable>
+            <input for="text" name="postcode" size="5" pattern="[0-9]{5}" required><br>
+            <label for="file">รูปผู้จอง</label>
+            <input type="file" name="file"><br>  
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            <label for="Username">Username:</label><br>
+            <input type="text" name="Username" pattern="\w[8,]" required><br>
+            <t>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</t><br><br>
+            <label for="password">Password :</label><br>
+            <input type="password" name="password" pattern=".{8}" required><br>
+            <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <label for="packet">แพคเก็จทัวร์ :</label>
+            <select name="packet">
+                <option value="">--select--</option>
+                <option value="ไทยแลนด์">ไทยแลนด์</option>
+                <option value="สิงค์โปร">สิงค์โปร</option>
+                <option value="อินเดีย">อินเดีย</option>
+                <option value="เวียดนาม">เวียดนาม</option>
+                <option value="มาเลเซีย">มาเลเซีย</option>
+            </select><br>
+            <label for="date">วันที่เดินทาง :</label>
+            <input type="date" name="date"><br>
+            <label for="travel">จำนวนผู้เดินทาง:</label>
+            <input type="number" name="travel" min="1" max="10"><br>
+            <label for="travel-type">เน้นการท่องเที่ยวแบบใด?</label><br>
+            <input type="checkbox" name="travel-type" value="shopping">ช็อปปิ้ง<br>
+            <input type="checkbox" name="travel-type" value="naural">ธรรมชาติ<br>
+            <input type="checkbox" name="travel-type" value="sea">ทะเล<br>
+        </fieldset>
+        <label for="condition">ยอมรับเงื่อนไขและข้อตกลง</label>
+        <input type="radio" name="codition" value="agree" checked="checked">I agree
+        <input type="radio" name="codition" value="disagree">I disagree
+        <input type="submit" value="จอง">
+    </body>
+</html>
